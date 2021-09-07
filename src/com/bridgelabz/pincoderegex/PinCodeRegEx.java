@@ -30,6 +30,8 @@ public class PinCodeRegEx {
 		checkValidPincode(pinCode);
 		pinCode = "A400088";
 		checkValidPincode(pinCode);
+		pinCode = "400088B";
+		checkValidPincode(pinCode);
 		
 		
 	}
