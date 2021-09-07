@@ -8,7 +8,7 @@ public class PinCodeRegEx {
 	public static void checkValidPincode(String pinCode){
 		
 		boolean isPinCode;
-		String pinCodeRegex = "^[0-9]{6}$";
+		String pinCodeRegex = "^[0-9]{3}\\s{0,1}[0-9]{3}$";
 		Pattern patternObject = Pattern.compile(pinCodeRegex);
 		if (pinCode == null) {
             isPinCode = false;
@@ -28,9 +28,17 @@ public class PinCodeRegEx {
 		
 		String pinCode = "400088";
 		checkValidPincode(pinCode);
+		
 		pinCode = "A400088";
 		checkValidPincode(pinCode);
+		
 		pinCode = "400088B";
+		checkValidPincode(pinCode);
+		
+		pinCode = "400 088";
+		checkValidPincode(pinCode);
+		
+		pinCode = "400  088";
 		checkValidPincode(pinCode);
 		
 		
